@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEBstructure</title>
+        <style>
+           * {
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+           } 
+            body {
+                background-color:  #11223d;
+                color: white;
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            main {
+                border: 2px solid white;
+            }
+            header {
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 2px solid white;
+                border-left: 2px solid white;
+                border-right:2px solid white;
+                padding: 0 20px 5px 20px;
+            }
+            nav {
+                display: flex;
+                justify-content:space-around;
+                gap: 100px;
+                align-items: center;
+            }
+            h1 {
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+            aside {
+                border-right: 2px solid white;
+                min-width: 200px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                line-height: 22px;
+            }
+            p {
+                line-height: 22px;
+                font-size: 14px;
+                padding: 10px 10px 10px 20px;
+            }
+            section {
+                padding: 10px;
+                border-top: 2px solid white;
+            }
+            .row {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            ul {
+                padding: 10px;
+                font-weight: bold;
+            }
+            .fotos {
+                display:flex;
+                justify-content: center;
+                gap: 50px;  
+                padding-top: 10px;
+            }
+            h2 {
+                font-size: 14px;
+                padding-top: 15px;
+            }
+            h5, a {
+                font-size: 18px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+            } 
+            h6 {
+                display:flex;
+                justify-content: center;
+            }
+            footer {
+                border-left: 2px solid white;
+                border-right: 2px solid white;
+                border-bottom: 2px solid white;
+                font-size: 15px;
+                text-align: center;
+                padding: 10px;
+            }
+            h2,h5,h6,p,footer {
+                font-weight: lighter;
+            }
+            a {
+                text-decoration: none;
+                color:white;
+            }
+            @media only screen and (max-width:500px){
+                .fotos {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .row {
+                    flex-direction: column;
+                }
+                aside {
+                    border-top: 2px solid white;
+                    border-right: none;
+                }
+                nav {
+                gap: 70px;
+                }
+              }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h5>Logo</h5>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#gallery">Galery</a>
+            </nav>
+        </header>
+        <main>
+           <div class="row">  
+                <article>
+                    <h1>Cockatoo</h1>  
+                    <p> A cockatoo is any of the 21 species of parrots belonging to the family Cacatuidae, the only family in the superfamily Cacatuoidea. Along with the Psittacoidea (true parrots) and the Strigopoidea (large New Zealand parrots), they make up the order Psittaciformes. The family has a mainly Australasian distribution, ranging from the Philippines and the eastern Indonesian islands of Wallacea to New Guinea, the Solomon Islands and Australia. </p>
+                </article>
+                <aside>
+                    <h2>Popular topics</h2>
+                    <ul>
+                    <li>Flamingos</li>
+                    <li>Pandas</li>
+                    <li>Elephants</li>
+                    </ul>
+                </aside>
+           </div>
+           <section id="gallery">
+               <h6>Cockatoo Gallery</h6>
+               <div class="fotos">
+                    <img src="pic1.jpg" width="100" height="100"> 
+                    <img src="pic2.jpeg" width="100" height="100">
+                    <img src="pic3jpg.jpg" width="100" height="100">
+               </div>
+           </section>
+        </main>
+        <footer>
+            <h6>&copy;1996-2024. All Rights Reserved</h6>
+        </footer>
+    </body>
+</html>
